@@ -219,7 +219,7 @@ export default function Home () {
             fontWeight={900}
             letterSpacing={'1px'}
           >
-            {'Hey there, 👋'}
+            {'Hey there! 👋'}
           </Text>
           <Text
             as='h3'
