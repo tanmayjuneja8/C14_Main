@@ -6,7 +6,6 @@ import { Button, Flex, Text, Spinner, useToast, Accordion, App, AccordionItem,Ch
 import Layout from 'components/Layout'
 import SelectCharacter from 'components/SelectCharacter'
 import Arena from 'components/Arena'
-import customTheme from '/Users/tanmayjuneja/Documents/demos/C14/frontend/styles/theme.js'
 import CONTRACT, { transformCharacterData } from 'utils/constants'
 
 const CONTRACT_ADDRESS = CONTRACT.MY_EPIC_GAME.ADDRESS // > TJ
