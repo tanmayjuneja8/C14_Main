@@ -7,7 +7,7 @@ import Layout from 'components/Layout'
 import SelectCharacter from 'components/SelectCharacter'
 import Arena from 'components/Arena'
 import CONTRACT, { transformCharacterData } from 'utils/constants'
-import powers from 'public/powers.png'
+import powers from 'public/powers.ico'
 
 const CONTRACT_ADDRESS = CONTRACT.MY_EPIC_GAME.ADDRESS // > TJ
 const CONTRACT_ABI = CONTRACT.MY_EPIC_GAME.ABI // > TJ
