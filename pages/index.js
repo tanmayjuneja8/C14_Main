@@ -2,12 +2,12 @@
 import { useEffect, useState } from 'react'
 import Head from 'next/head'
 import { ethers } from 'ethers'
-import { Button, Flex, Text, Spinner, useToast, Accordion, AccordionItem, AccordionButton, AccordionIcon, Box, AccordionPanel, Image, Link } from '@chakra-ui/react'
+import { Button, Flex, Text, Spinner, useToast, Accordion, App, AccordionItem,ChakraProvider, AccordionButton, AccordionIcon, Box, AccordionPanel, Image, Link } from '@chakra-ui/react'
 import Layout from 'components/Layout'
 import SelectCharacter from 'components/SelectCharacter'
 import Arena from 'components/Arena'
+import customTheme from '/Users/tanmayjuneja/Documents/demos/C14/frontend/styles/theme.js'
 import CONTRACT, { transformCharacterData } from 'utils/constants'
-import powers from 'public/powers.ico'
 
 const CONTRACT_ADDRESS = CONTRACT.MY_EPIC_GAME.ADDRESS // > TJ
 const CONTRACT_ABI = CONTRACT.MY_EPIC_GAME.ABI // > TJ
@@ -181,6 +181,9 @@ export default function Home () {
       }
     }
   }
+  // <ChakraProvider theme={customTheme}>
+  //     <App />
+  // </ChakraProvider>
 
   return (
     <Layout
@@ -225,9 +228,8 @@ export default function Home () {
             fontWeight={600}
             letterSpacing={'.5px'}
           >
-            Welcome to C14! 
+          Welcome to C14! 
           </Text>
-
           <Accordion w={'100%'} allowMultiple>
             <AccordionItem>
               <h2>
@@ -238,13 +240,15 @@ export default function Home () {
                       fontSize={30}
                       fontWeight={'bold'}>
                         Want to list your company?
+                    <img src="https://thumbs.gfycat.com/TerribleVacantIndianrockpython-max-1mb.gif" width = "55" height = "55" align = "right"></img>
                     </Text>
                   </Box>
                   <AccordionIcon />
+                  
                 </AccordionButton>
               </h2>
               <AccordionPanel pb={4}>
-                <Text mb={5} as={'p'} fontSize={200}> <b><center>🌎</center></b></Text>
+                <center><img src="https://r2.community.samsung.com/t5/image/serverpage/image-id/2858216iF966CF430D380489/image-size/large?v=v2&px=999" ></img></center><br></br>
                 <Text mb={5} as={'p'} fontSize={20}> <b></b> If you want to list your company at the C14 exchange, reach out to us at c14forthefuture@gmail.com. May the Greenhouse gases NOT be with you! <br/></Text>
               </AccordionPanel>
             </AccordionItem>
@@ -257,12 +261,14 @@ export default function Home () {
                       fontSize={30}
                       fontWeight={'bold'}>
                         Want to sell non-C14 offsets?
+                      <img src="https://thumbs.gfycat.com/TerribleVacantIndianrockpython-max-1mb.gif" width = "55" height = "55" align = "right"></img>
                     </Text>
                   </Box>
-                  <AccordionIcon />
+                  <AccordionIcon /> 
                 </AccordionButton>
               </h2>
               <AccordionPanel pb={4} w={'100%'}>
+                <center><img src="https://i.gifer.com/4M52.gif" align = "center" width = "350" height = "350"></img></center><br></br><br></br>
                 <Text mb={5} as={'p'} fontSize={20}>It is necessary to have Metamask installed in your browser. <b>💸</b> <br/>(Make sure to connect to the Rinkeby testnet and transfer test ETH to interact with the application.)</Text>
                 <Text mb={5} as={'p'} fontSize={20}>You can obtain test ETH on this <Link color={'blue.300'} href='https://faucets.chain.link/rinkeby' >link.</Link> <b>🤑</b></Text>
                 <Text mb={5} as={'p'} fontSize={20}>You can choose any of the listed NFTs on the platform (keep in mind that not all are the same, they differ a lot in their attributes). <b>🦹</b> <br/> </Text>

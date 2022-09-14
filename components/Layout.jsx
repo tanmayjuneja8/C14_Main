@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import React from 'react'
-import { FaEthereum, FaGithub, FaLinkedin, FaWallet } from 'react-icons/fa'
+import { FaEthereum, FaGithub, FaLinkedin, FaWallet, FaCoins } from 'react-icons/fa'
 import { Flex, Icon, IconButton, Image, Link, Text, Tooltip, useColorMode } from '@chakra-ui/react'
 import { MoonIcon, SunIcon } from '@chakra-ui/icons'
 import LOGO from 'public/wizard.ico'
@@ -55,7 +55,7 @@ const Layout = ({ contract, head, chain, address, children }) => {
               mx={2}
               _hover={{
                 cursor: 'pointer',
-                color: 'blue.100'
+                color: 'blue.500'
               }}
               as={Link}
               href={`https://rinkeby.etherscan.io/address/${contract}`}
@@ -68,7 +68,7 @@ const Layout = ({ contract, head, chain, address, children }) => {
               mx={2}
               _hover={{
                 cursor: 'pointer',
-                color: 'blue.100'
+                color: 'blue.500'
               }}
               as={Link}
               href={'https://www.linkedin.com/in/tanmay-juneja-a872531b9/'}
@@ -81,7 +81,7 @@ const Layout = ({ contract, head, chain, address, children }) => {
               mx={2}
               _hover={{
                 cursor: 'pointer',
-                color: 'blue.100'
+                color: 'blue.500'
               }}
               as={Link}
               href={'https://github.com/tanmayjuneja8'}
@@ -103,6 +103,19 @@ const Layout = ({ contract, head, chain, address, children }) => {
               : <Text color={'red.600'}>Wrong network</Text>
             }
           </Text>
+          <Tooltip hasArrow label={'Launch Exchange'} bg={'gray.900'} color={'white'}>
+            <IconButton
+              mx={2}
+              _hover={{
+                cursor: 'pointer',
+                color: 'blue.500'
+              }}
+              as={Link}
+              href={'https://c14-exchange.vercel.app/'}
+              isExternal
+              icon={<Icon as={FaCoins} w={7} h={7}/>}
+            />
+          </Tooltip>
         </Flex>
 
         <Text px={'5'}>|</Text>
@@ -120,7 +133,7 @@ const Layout = ({ contract, head, chain, address, children }) => {
             mx={5}
             _hover={{
               cursor: 'pointer',
-              color: 'blue.100'
+              color: 'blue.500'
             }}
             onClick={toggleColorMode}
             icon={

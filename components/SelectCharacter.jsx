@@ -104,7 +104,8 @@ const SelectCharacter = ({ setCharacterNFT, contract, abi }) => {
           bgGradient={'linear(to-r, blue.300, blue.500)'}
           bgClip='text'
         >
-          Mint Your NFT. Choose wisely. 
+        <center><img src="https://media3.giphy.com/media/rfsjVNg3qVnvn86uvz/giphy.gif?cid=790b7611bad85e0ba4903e687fb52b6e0c846c90c9edbc2c&rid=giphy.gif&ct=s" ></img></center>
+        <center>Mint Your NFT. Choose wisely. </center>
         </Text>
       </Flex>
       {loader || loaderCard

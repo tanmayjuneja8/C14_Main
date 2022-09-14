@@ -8,17 +8,22 @@ const customTheme = extendTheme({
     global: props => ({
       'html, body': {
         fontSize: 'md',
-        color: props.colorMode === 'dark' ? 'white' : 'gray.600',
+        color: props.colorMode === 'dark' ? 'white' : 'black.600',
         lineHeight: 'tall'
       },
       a: {
-        color: props.colorMode === 'dark' ? 'teal.300' : 'teal.500'
+        color: props.colorMode === 'dark' ? 'black.500' : 'black.500'
       }
     })
   },
   colors: {
-    brand: {}
-  }
+    brand: {
+      100: "#f7fafc",
+      // ...
+      900: "#1a202c",
+    },
+  },
+
 })
 
 export default customTheme
